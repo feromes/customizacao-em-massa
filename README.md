@@ -1,4 +1,4 @@
-# Customização em massa
+# Customização em massa a partir do Browser
 
 Repositório de demonstração dos recursos básicos do JSCad para customização em massa no Design e Arquitetura Digital.
 
