@@ -11,7 +11,7 @@ const getParameterDefinitions = () => {
     { name: 'altura', type: 'int', initial: 20, caption: 'Altura (Módulo):' },
     { name: 'modulos', type: 'int', initial: 5, caption: 'Módulos:' },
     { name: 'cor', type: 'color', initial: '#FFB431', caption: 'Cor:' },
-    { name: 'opcao', type: 'choice', caption: 'Opção:', values: ['Pináculo', 'Rológio', 'Sem adorno'], initial: 'Pináculo' },
+    { name: 'opcao', type: 'choice', caption: 'Opção:', values: ['Pináculo', 'Relógio', 'Sem adorno'], initial: 'Pináculo' },
     { name: 'blocos', type: 'checkbox', checked: false, caption: 'Exibe blocos:'}
   ]
 }
@@ -122,7 +122,7 @@ const gera_blocos = (params) => {
         translate([0, 0, a], pinaculo(l,a))
       )
       break
-    case "Rológio":
+    case "Relógio":
         geometrias.push(
           translate([0, 0, a], relogio(l,a))
         )
