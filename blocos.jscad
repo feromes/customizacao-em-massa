@@ -7,8 +7,8 @@ const { colorize, hexToRgb } = jscad.colors
 
 const getParameterDefinitions = () => {
   return [
-    { name: 'largura', type: 'int', initial: 10, caption: 'Largura:' }, 
-    { name: 'altura', type: 'int', initial: 20, caption: 'Altura:' },
+    { name: 'largura', type: 'int', initial: 10, caption: 'Largura (Módulo):' }, 
+    { name: 'altura', type: 'int', initial: 20, caption: 'Altura (Módulo):' },
     { name: 'modulos', type: 'int', initial: 5, caption: 'Módulos:' },
     { name: 'cor', type: 'color', initial: '#FFB431', caption: 'Cor:' },
     { name: 'opcao', type: 'choice', caption: 'Opção:', values: ['Pináculo', 'Rológio', 'Sem adorno'], initial: 'Pináculo' },
