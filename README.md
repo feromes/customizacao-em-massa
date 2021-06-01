@@ -12,4 +12,19 @@ De certa forma, a hipótese levantada aqui é a possibilidade de customizar arqu
 
 ## Introdução ao CSG
 
+## Materiais e métodos
+
+## Resultados
+
+## Possíveis limitações
+
+## Próximos passos
+
+Os resultados apresentados aqui são lúdicos. Apesar de apresentarem a maioria dos recursos necessários para o desenvolvimento de aplicações práticas ele ainda está limitado a um jogo. O próximos passos seriam no caminho de desenvolvimento de aplicações práticas que possibilitem a produção de algo customizável, seja para corte em CNC, impressão 3D, produção de conteúdo como plantas de layout, cortes e elevações para poder assim validar e testar a performance para esse tipo de aplicação.
+
+Uma outra abordagem é a integração de outras bibliotecas em JavaScript para ir além do CSG, talvez até com processamento do lado do servidor. Além disso, a possiblidade de usar a customização em WebSites integrados com outras aplicações como bases de dados, redes sociais, etc ...
+
+## Como contribuir
+
+Este repositório possui licensa criativa e pode ser copiado, distribuido, compartilhado e modificado livremente. A melhor maneira de contribuir é sobretudo tentar executa-lo localmente, compreende-lo e a partir dele criar novas possibildiades. Dessa forma é possível validar novos usos e compartilhar conosco o conhecimento adquirido. Afinal é assim que a ciência flui.
 
