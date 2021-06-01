@@ -28,11 +28,11 @@ A única biblioteca utilizada será o JSCad que pode ser instalado com o seguint
 
 ``npm install @jscad``
 
-No entanto, não é necessário a instalação localmente, pois, como o código pode ser executado e alterado diretamente no Browser isso pode ser relizado diretamente [aqui]() e copiando o código disponível no arquivo compartilhado [aqui]()
+No entanto, não é necessário a instalação localmente, pois, como o código pode ser executado e alterado diretamente no Browser isso pode ser relizado diretamente [aqui](https://openjscad.xyz/) e copiando o código disponível no arquivo compartilhado [aqui](https://raw.githubusercontent.com/feromes/customizacao-em-massa/main/blocos.jscad)
 
 ## Resultados
 
-O resultado apresentado [aqui]() inicialmente é o jogo de blocos traduzido e acessível pelo Browser diretamento por esse [link]()
+O resultado apresentado [aqui](https://openjscad.xyz/#https://raw.githubusercontent.com/feromes/customizacao-em-massa/main/blocos.jscad) inicialmente é o jogo de blocos traduzido e acessível pelo Browser diretamento por esse [link]()
 
 Além do resultado prático que possibilita ver as modificações no modelo a partir da modificação dos parâmetros, é possível estudar o código e a partir de modificações, adaptações compreender a estratégia utilizada para ter autonomia de resolver os problemas a partir de uma visão particular. Ou seja, é saber das possibilidade a partir de um ferramental estabelecido, o código, e com isso ser capaz de resolver os próximos problemas de forma autônoma. Que tal experimentar? 
 
