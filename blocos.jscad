@@ -132,6 +132,11 @@ const gera_blocos = (params) => {
     geometrias.push(
       translate([l*i, 0, 0], janela(l,a))
     )
+    if (i === params.modulos - 1 && params.modulos > 4) {
+      geometrias.push(
+        translate([l*i, 0, a], campanario(l,a))
+      )
+    }
   }
   return geometrias
 }
