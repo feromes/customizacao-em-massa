@@ -3,6 +3,7 @@ const { cuboid, cylinder, polygon, cube } = jscad.primitives
 const { translate, rotate } = jscad.transforms
 const { union, subtract, intersect } = jscad.booleans
 const { extrudeLinear } = jscad.extrusions
+const { colorize, hexToRgb } = jscad.colors
 
 const getParameterDefinitions = () => {
   return [
@@ -136,7 +137,9 @@ const gera_blocos = (params) => {
 }
 
 const main = (params) => {
-  return gera_blocos(params)
+  return colorize(hexToRgb(params.cor),
+    gera_blocos(params)
+  )
 }
  
 module.exports = { main, getParameterDefinitions }
