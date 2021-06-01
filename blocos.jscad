@@ -106,15 +106,19 @@ const blocos = (l, a) => {
   )]
 }
 
-const main = (params) => {
+const gera_blocos = (params) => {
   let l = params.largura
   let a = params.altura
-  let geometrias = [cube(1)]
+  let geometrias = [porta(l, a)]
   console.log(params.blocos)
-  if (blocos) {
+  if (params.blocos) {
     geometrias.push(blocos(l,a))
   }
   return geometrias
+}
+
+const main = (params) => {
+  return gera_blocos(params)
 }
  
 module.exports = { main, getParameterDefinitions }
