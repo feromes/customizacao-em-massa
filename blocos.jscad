@@ -8,8 +8,9 @@ const getParameterDefinitions = () => {
   return [
     { name: 'largura', type: 'int', initial: 10, caption: 'Largura:' }, 
     { name: 'altura', type: 'int', initial: 20, caption: 'Altura:' },
-    { name: 'modulos', type: 'int', initial: 1, caption: 'Módulos:' },
-    { name: 'pinaculo', type: 'checkbox', checked: true, caption: 'Possui Pináculo:'},
+    { name: 'modulos', type: 'int', initial: 5, caption: 'Módulos:' },
+    { name: 'cor', type: 'color', initial: '#FFB431', caption: 'Cor:' },
+    { name: 'opcao', type: 'choice', caption: 'Opção:', values: ['Pináculo', 'Rológio', 'Sem adorno'], initial: 'Pináculo' },
     { name: 'blocos', type: 'checkbox', checked: false, caption: 'Exibe blocos:'}
   ]
 }
@@ -113,6 +114,23 @@ const gera_blocos = (params) => {
   console.log(params.blocos)
   if (params.blocos) {
     geometrias.push(blocos(l,a))
+  }
+  switch (params.opcao) {
+    case "Pináculo":
+      geometrias.push(
+        translate([0, 0, a], pinaculo(l,a))
+      )
+      break
+    case "Rológio":
+        geometrias.push(
+          translate([0, 0, a], relogio(l,a))
+        )
+        break
+  }
+  for (let i = 1; i < params.modulos; i++) {
+    geometrias.push(
+      translate([l*i, 0, 0], janela(l,a))
+    )
   }
   return geometrias
 }
