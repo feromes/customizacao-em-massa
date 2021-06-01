@@ -1,5 +1,5 @@
 const jscad = require('@jscad/modeling')
-const { cuboid, cylinder, polygon } = jscad.primitives
+const { cuboid, cylinder, polygon, cube } = jscad.primitives
 const { translate, rotate } = jscad.transforms
 const { union, subtract, intersect } = jscad.booleans
 const { extrudeLinear } = jscad.extrusions
@@ -24,7 +24,10 @@ const relogio = (l, a) => {
     parede(l,a), 
     translate([l/2, 0, a - a/3], 
       rotate([Math.PI/2,0,0],
-        cylinder({radius: l/3, size: l/5}))))
+        cylinder({radius: l/3, size: l/5})
+      )
+    )
+  )
 }
 
 const pinaculo = (l, a) => {
@@ -44,7 +47,10 @@ const campanario = (l, a) => {
       translate([l, l, a/2],
         rotate([Math.PI/2, Math.PI/-2,0], 
           extrudeLinear({height: l}, 
-            polygon({points: [[0,0], [a/2, l/2], [0, l]]}))))
+            polygon({points: [[0,0], [a/2, l/2], [0, l]]})
+          )
+        )
+      )
     ),
     translate([l/2, 0, a/3],
       rotate([Math.PI/2, 0, 0],
@@ -103,7 +109,12 @@ const blocos = (l, a) => {
 const main = (params) => {
   let l = params.largura
   let a = params.altura
-  return blocos(l,a)
+  let geometrias = [cube(1)]
+  console.log(params.blocos)
+  if (blocos) {
+    geometrias.push(blocos(l,a))
+  }
+  return geometrias
 }
  
 module.exports = { main, getParameterDefinitions }
